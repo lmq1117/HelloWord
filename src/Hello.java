@@ -18,5 +18,6 @@ public class Hello {
         String decrypted = EncodeAndDecode.aesDecrypt(encrypted,aesKey);
         System.out.println("decrypted:" + decrypted + "\r\n");//AES 解密后
 
+
     }
 }

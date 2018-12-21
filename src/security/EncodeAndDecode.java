@@ -51,6 +51,8 @@ public class EncodeAndDecode {
             Cipher cipher = Cipher.getInstance(KEY_ALGORITHM);// 创建密码器
             cipher.init(Cipher.DECRYPT_MODE, secretKey);// 初始化
             byte[] result = cipher.doFinal(Base64.decodeBase64(content));// 解密
+            //log到什么地方了呢
+            //LOGGER.error("aes decrypt success", "asdfasdfdadsfasfewqqfefasdfdas哈哈");
             return new String(result);
         } catch (Exception e) {
             LOGGER.error("aes decrypt error", e);
@@ -94,5 +96,5 @@ public class EncodeAndDecode {
     public static String SHA1encode(String str) {
         return DigestUtils.sha1Hex(str);
     }
-    
+
 }
